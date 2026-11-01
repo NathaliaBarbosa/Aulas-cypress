@@ -1,4 +1,4 @@
-name: Web E2E Tests
+name: 'Web E2E Tests'
 
 on: 
   workflow_dispatch:
@@ -16,11 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
-
-      # Conferir a versão instalada
-      - name: Node version
-        run: node --version
-
+          
       #aqui não coloquei o  npm install para deixar exatamente igual ao meu package-lock.json e rodar conforme eu rodei na maquina local
       - name: Instalando dependências
         run: npm ci
@@ -34,5 +30,3 @@ jobs:
         with:
           name: relatorios
           path: cypress/reports
-
-
